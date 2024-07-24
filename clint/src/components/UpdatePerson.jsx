@@ -17,7 +17,9 @@ const UpdatePerson = () => {
   useEffect(() => {
     const fetchPerson = async () => {
       try {
-        const res = await axios.get(`http://localhost:3030/getrecord/${id}`);
+        const res = await axios.get(
+          `https://server-crud-ckxz.onrender.com//getrecord/${id}`
+        );
         if (res.data && res.data.length > 0) {
           setValues(res.data[0]);
         } else {
@@ -38,7 +40,10 @@ const UpdatePerson = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`http://localhost:3030/update/${id}`, values);
+      const res = await axios.put(
+        `https://server-crud-ckxz.onrender.com//update/${id}`,
+        values
+      );
       console.log(res);
       navigate("/");
     } catch (err) {

@@ -21,7 +21,7 @@ const CreatePerson = () => {
     e.preventDefault();
     if (Object.values(values).every((value) => value.trim() !== "")) {
       axios
-        .post("http://localhost:3030/create", values)
+        .post("https://server-crud-ckxz.onrender.com//create", values)
         .then((res) => {
           console.log(res);
           navigate("/");

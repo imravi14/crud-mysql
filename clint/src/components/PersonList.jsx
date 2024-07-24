@@ -11,7 +11,7 @@ const PersonList = () => {
 
   const fetchPersons = async () => {
     try {
-      const res = await axios.get("http://localhost:3030");
+      const res = await axios.get("https://server-crud-ckxz.onrender.com/");
       if (Array.isArray(res.data)) {
         setPersons(res.data);
       } else {
